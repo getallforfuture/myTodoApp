@@ -1,0 +1,6 @@
+<form (ngSubmit)='onCreate()'>
+  <label for="input"><span>Enter your todo name</span></label>
+  <input id="input" type="text" name="name" [(ngModel)]="name">
+  <button type="submit" [disabled]="!name" >Create todo item</button>
+</form>
+
