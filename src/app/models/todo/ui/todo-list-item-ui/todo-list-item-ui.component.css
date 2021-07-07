@@ -1,0 +1,8 @@
+.icon{
+  vertical-align: middle;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.icon:hover{
+  cursor: pointer;
+}

@@ -1,0 +1,7 @@
+<div *ngIf="form">
+  <form [formGroup]="form" (ngSubmit)="onEdit()">
+    <input type="text" formControlName="name">
+    <button type="submit">Ok</button>
+    <button type="button" (click)="onCancel()">Cancel</button>
+  </form>
+</div>

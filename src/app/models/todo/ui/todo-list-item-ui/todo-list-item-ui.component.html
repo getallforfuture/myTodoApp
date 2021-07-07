@@ -1,0 +1,9 @@
+<div *ngIf="todo">
+  <label>
+    <input  type="checkbox" [checked]="todo.completed" (click)="onToggle($event)">
+    <del *ngIf="todo.completed"><span>{{todo.name}}</span></del>
+    <span *ngIf="!todo.completed">{{todo.name}} </span>
+  </label>
+  <img  (click)="onEdit()" class="icon" src="https://img.icons8.com/ios-glyphs/30/000000/edit--v1.png"/>
+  <img (click)="onDelete()" class="icon" src="https://img.icons8.com/ios-glyphs/30/000000/macos-close.png"/>
+</div>

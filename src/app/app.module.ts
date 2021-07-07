@@ -6,7 +6,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import {RouterModule} from "@angular/router";
 import {TodoModule} from "./models/todo/todo.module";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -17,7 +17,6 @@ import {FormsModule} from "@angular/forms";
 
   imports: [
     BrowserModule,
-    FormsModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}),
     RouterModule.forRoot([]),
