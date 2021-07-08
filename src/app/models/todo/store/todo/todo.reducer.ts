@@ -1,6 +1,6 @@
 import {createReducer, on} from "@ngrx/store";
 import {Todo} from "../../models/Todo";
-import {todoCreate, todoDelete, todoEdit, todoToggle} from "./todo.actions";
+import {loadTodoState, todoCreate, todoDelete, todoEdit, todoToggle} from "./todo.actions";
 
 export const TODO_REDUCER_NODE = 'todo'
 
@@ -43,6 +43,9 @@ export const todoReducer = createReducer(
       ...todo,
       name: name
     }: todo)
+  })),
+  on(loadTodoState, (state,{storageState}) => ({
+    ...storageState
   })),
   on(todoDelete, (state, {id}) => ({
     ...state,

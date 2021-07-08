@@ -1,4 +1,5 @@
 import {createAction, props} from "@ngrx/store";
+import {TodoState} from "./todo.reducer";
 
 export const todoCreate = createAction(
   '[TODO] Crete todo',
@@ -15,5 +16,9 @@ export const todoEdit = createAction(
 export const todoDelete = createAction(
   '[TODO] Delete todo',
   props<{id: number}>()
+)
+export const loadTodoState = createAction(
+  '[TODO] load todo state',
+  props<{storageState: TodoState}>()
 )
 

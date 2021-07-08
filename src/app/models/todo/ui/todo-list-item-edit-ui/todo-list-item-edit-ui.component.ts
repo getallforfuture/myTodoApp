@@ -9,8 +9,10 @@ import {Todo} from "../../models/Todo";
 })
 export class TodoListItemEditUiComponent implements OnInit {
   @Input() todo?: Todo;
+
   @Output()
   edit = new EventEmitter<string>();
+
   form?: FormGroup;
 
   constructor(private fb: FormBuilder) { }
@@ -26,8 +28,8 @@ export class TodoListItemEditUiComponent implements OnInit {
   }
 
   onEdit(){
-    if (this.form?.value.name)
-      this.edit.emit(this.form.value.name)
+    if (this.form)
+      this.edit.emit(this.form.value)
   }
 
   onCancel() {

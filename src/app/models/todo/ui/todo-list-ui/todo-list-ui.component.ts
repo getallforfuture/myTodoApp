@@ -36,9 +36,9 @@ export class TodoListUiComponent implements OnInit {
     this.toggle.emit(id)
   }
 
-  onEdit(name: string, id: number){
+  onEdit(name: any, id: number){
     this.editIds = this.editIds.filter( editId => editId !== id )
-    this.edit.emit({ id, name })
+    this.edit.emit({ id, name: name.name})
   }
 
   onEditMode(id: number){
